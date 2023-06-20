@@ -30,3 +30,4 @@ export default globalSlice.reducer;
 //setmode this accepts one state and changes to another state.
 //setMode -> actions -> this changes to different mode.
 //reducer changes one state to another.
+//selector-> helps to extract specific function from redux store

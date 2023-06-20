@@ -8,3 +8,14 @@ body,
   width: 100%;
   font-family: "Inter", sans-serif;
 }
+
+::-webkit-scrollbar{
+  width: 3px;
+  /* height:1px; */
+}
+::-webkit-scrollbar-track{
+   background-color:#cfcfcf;
+}
+::-webkit-scrollbar-thumb{
+   background-color:#a5a5a5;
+}
