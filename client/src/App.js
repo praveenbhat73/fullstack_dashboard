@@ -17,6 +17,8 @@ import Monthly from "scenes/Monthly/Monthly";
 import Breakdown from "scenes/Breakdown.js";
 import Admin from "scenes/Admin/Admin";
 import Performance from './scenes/Performance/Performance'
+import Workflow from "./scenes/Workflow/Workflow"
+import Kanban from './scenes/Kanban/Kanban'
 const App = () => {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -42,6 +44,8 @@ const App = () => {
               <Route path="/breakdown" element={<Breakdown />} />
               <Route path="/admin" element={<Admin />} />
               <Route path="/performance" element={<Performance />} />
+              <Route path="/workflow" element={<Workflow />} />
+              <Route path="/kanban" element={<Kanban />} />
           </Route>
         </Routes>
        </ThemeProvider>

@@ -27,7 +27,9 @@ import {
   AdminPanelSettingsOutlined,
   TrendingUpOutlined,
   PieChartOutlined,
+  ViewKanban,
 } from "@mui/icons-material";
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "./FlexBetween";
@@ -90,6 +92,11 @@ const navItems = [
     text: "Performance",
     icon: <TrendingUpOutlined />,
   },
+  {
+    text:"WorKFlow",
+    icon:<AccountTreeIcon/>
+  },
+
 ];
 
 const Sidebar = ({
