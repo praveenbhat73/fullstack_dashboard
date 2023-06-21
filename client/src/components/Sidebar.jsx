@@ -100,19 +100,13 @@ const Sidebar = ({
   isNonMobile,
 }) => {
   const { pathname } = useLocation();
-  //useLocation hook gives information about the current url location in the web pathname is object which is destructing it
-
   const [active, setActive] = useState("");
   const navigate = useNavigate();
-  //helps to modify the browser url without refreshing the page
   const theme = useTheme();
-
 
   useEffect(() => {
     setActive(pathname.substring(1));
   }, [pathname]);
-  //this helps to set pathname to active browser url 
-  //whenever pathname changes that time page renders
 
   return (
     <Box component="nav">
@@ -199,8 +193,8 @@ const Sidebar = ({
             </List>
           </Box>
 
-          {/* <Box position="absolute" bottom="2rem">
             <Divider />
+            <Box position="" bottom="3rem">
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
                 component="img"
@@ -217,7 +211,9 @@ const Sidebar = ({
                   fontSize="0.9rem"
                   sx={{ color: theme.palette.secondary[100] }}
                 >
-                  {user.name}
+                  {
+                    user.name
+                  }
                 </Typography>
                 <Typography
                   fontSize="0.8rem"
@@ -233,7 +229,7 @@ const Sidebar = ({
                 }}
               />
             </FlexBetween>
-          </Box> */}
+          </Box>
         </Drawer>
       )}
     </Box>
