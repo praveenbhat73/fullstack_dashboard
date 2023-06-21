@@ -22,7 +22,11 @@ import salesRoutes from "./routes/sales.js";
 import managementRoutes from "./routes/management.js";
 
 
-
+// import User from './models/User.js'
+// import Product from './models/Product.js';
+// import ProductStat from './models/ProductStat.js';
+// import {  } from './data/index.js';
+import {dataProduct,dataProductStat} from "./data/index.js"
 dotenv.config();
 const app=express();
 //initialise the express instance to the app and use app to call functions
@@ -63,6 +67,9 @@ mongoose.connect(process.env.MONGO_URL,{
 }).then(()=>{
     app.listen(PORT,()=>
     console.log(`Server is running on port ${PORT}`))
+    // User.insertMany(dataUser);
+    // Product.insertMany(dataProduct);
+    // ProductStat.insertMany(dataProductStat);
 }).catch((error)=>{
     console.log(`Server is not connected to ${PORT}`)
 })
