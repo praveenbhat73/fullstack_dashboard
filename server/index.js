@@ -26,7 +26,9 @@ import managementRoutes from "./routes/management.js";
 // import Product from './models/Product.js';
 // import ProductStat from './models/ProductStat.js';
 // import {  } from './data/index.js';
-import {dataProduct,dataProductStat} from "./data/index.js"
+// import {dataProduct,dataProductStat} from "./data/index.js"
+import Transaction from './models/Transaction.js';
+import {dataTransaction} from './data/index.js'
 dotenv.config();
 const app=express();
 //initialise the express instance to the app and use app to call functions
@@ -70,6 +72,7 @@ mongoose.connect(process.env.MONGO_URL,{
     // User.insertMany(dataUser);
     // Product.insertMany(dataProduct);
     // ProductStat.insertMany(dataProductStat);
+    Transaction.insertMany(dataTransaction);
 }).catch((error)=>{
     console.log(`Server is not connected to ${PORT}`)
 })

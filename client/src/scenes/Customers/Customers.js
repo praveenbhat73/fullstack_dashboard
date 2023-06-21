@@ -53,7 +53,8 @@ const Customers = () => {
   return (
     <Box m="1.5rem 2.5rem">
       <Header title="CUSTOMERS" subtitle="List of Customers" />
-      <Box
+      {
+        data?   <Box
         mt="40px"
         height="75vh"
         sx={{
@@ -79,6 +80,9 @@ const Customers = () => {
           "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
             color: `${theme.palette.secondary[200]} !important`,
           },
+          "& .MuiDataGrid-checkbox":{
+            backgroundColor:"blue"
+          }
         }}
       >
         <DataGrid
@@ -86,8 +90,14 @@ const Customers = () => {
           getRowId={(row) => row._id}
           rows={data || []}
           columns={columns}
+          checkboxSelection
+          // rowSelection
         />
-      </Box>
+      </Box> :<>
+        Loading...
+      </>
+      }
+      
     </Box>
   );
 };
