@@ -8,6 +8,11 @@ export const api = createApi({
     "Products",
     "Customers",
     "Transactions",
+    "Geography",
+    "Sales",
+    "Admins",
+    "Performance",
+    "Dashboard"
    
   ],
   endpoints: (build) => ({
@@ -31,7 +36,28 @@ export const api = createApi({
         }),
         providesTags: ["Transactions"],
       }),
-   
+      getGeography: build.query({
+        query: () => "client/geography",
+        providesTags: ["Geography"],
+      }),
+
+      getSales: build.query({
+        query: () => "sales/sales",
+        providesTags: ["Sales"],
+      }),
+      getAdmins: build.query({
+        query: () => "management/admins",
+        providesTags: ["Admins"],
+      }),
+      getUserPerformance: build.query({
+        query: (id) => `management/performance/${id}`,
+        providesTags: ["Performance"],
+      }),
+
+      getDashboard: build.query({
+        query: () => "general/dashboard",
+        providesTags: ["Dashboard"],
+      }),
   }),
 });
 
@@ -40,6 +66,11 @@ export const {
   useGetProductsQuery,
   useGetCustomersQuery,
   useGetTransactionsQuery,
+  useGetGeographyQuery,
+  useGetSalesQuery,
+  useGetAdminsQuery,
+  useGetUserPerformanceQuery,
+  useGetDashboardQuery
 } = api;
 
 //redux toolkit is used inorder to set url path
