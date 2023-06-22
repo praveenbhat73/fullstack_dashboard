@@ -32,6 +32,11 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const isOpen = Boolean(anchorEl);
   const handleClick = (event) => setAnchorEl(event.currentTarget);
   const handleClose = () => setAnchorEl(null);
+  const handlesubmit=()=>{
+    localStorage.clear();
+    window.location.pathname="/"
+
+  }
 
   return (
     <AppBar
@@ -118,7 +123,7 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
               onClose={handleClose}
               anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
             >
-              <MenuItem onClick={handleClose}>Log Out</MenuItem>
+              <MenuItem onClick={handlesubmit}>Log Out</MenuItem>
             </Menu>
           </FlexBetween>
         </FlexBetween>
