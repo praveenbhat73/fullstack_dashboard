@@ -21,7 +21,7 @@ import generalRoutes from "./routes/general.js";
 import salesRoutes from "./routes/sales.js";
 import managementRoutes from "./routes/management.js";
 // import OverallStat from './models/OverallStat.js';
-import AffiliateStat from './models/AffiliateStat.js';
+// import AffiliateStat from './models/AffiliateStat.js';
 
 // import User from './models/User.js'
 // import Product from './models/Product.js';
@@ -31,7 +31,7 @@ import AffiliateStat from './models/AffiliateStat.js';
 // import Transaction from './models/Transaction.js';
 // import {dataTransaction} from './data/index.js'
 // import {dataOverallStat} from './data/index.js'
-import { dataAffiliateStat} from './data/index.js'
+// import { dataAffiliateStat} from './data/index.js'
 dotenv.config();
 const app=express();
 //initialise the express instance to the app and use app to call functions
