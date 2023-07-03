@@ -19,6 +19,7 @@ import Admin from "scenes/Admin/Admin";
 import Performance from './scenes/Performance/Performance'
 import Workflow from "./scenes/Workflow/Workflow"
 import Kanban from './scenes/Kanban/Kanban'
+// import Predictions from "scenes/Predication";
 const App = () => {
   const mode = useSelector((state) => state.global.mode);
   const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
@@ -26,6 +27,7 @@ const App = () => {
   //above code is used to call themesetting function and change and memioze the theme value when its rendering or when dom state  changes
   return (
     <div className="app">
+    {/* <Predictions></Predictions> */}
     <BrowserRouter>
 
        <ThemeProvider theme={theme}>
