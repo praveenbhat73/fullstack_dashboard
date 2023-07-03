@@ -32,7 +32,7 @@ import managementRoutes from "./routes/management.js";
 // import {dataTransaction} from './data/index.js'
 // import {dataOverallStat} from './data/index.js'
 // import { dataAffiliateStat} from './data/index.js'
-dotenv.config();
+dotenv.config({path:'.env.local'});
 const app=express();
 //initialise the express instance to the app and use app to call functions
 //app.use()-> its used to add middleware function to server side
