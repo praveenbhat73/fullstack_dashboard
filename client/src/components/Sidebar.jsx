@@ -139,7 +139,7 @@ const Sidebar = ({
               <FlexBetween color={theme.palette.secondary.main}>
                 <Box display="flex" alignItems="center" gap="0.5rem">
                   <Typography variant="h4" fontWeight="bold">
-                    Logo
+                    Dashboard
                   </Typography>
                 </Box>
                 {!isNonMobile && (
@@ -201,7 +201,7 @@ const Sidebar = ({
           </Box>
 
             <Divider />
-            <Box position="" bottom="3rem">
+            {/* <Box position="" bottom="3rem">
             <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
               <Box
                 component="img"
@@ -236,7 +236,7 @@ const Sidebar = ({
                 }}
               />
             </FlexBetween>
-          </Box>
+          </Box> */}
         </Drawer>
       )}
     </Box>
